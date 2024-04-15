@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\StudentController;
+use App\Http\Controllers\Api\StudentSubjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('students/{number}', [StudentController::class, 'show']);
+Route::post('students/subscribe', [StudentSubjectController::class, 'store']);
+Route::post('students/unsubscribe', [StudentSubjectController::class, 'destroy']);

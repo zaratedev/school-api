@@ -17,7 +17,8 @@ class ClassroomFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'classroom_number' => $this->faker->unique()->bothify('??-##'),
+            'capacity' => $this->faker->randomNumber(2, true),
         ];
     }
 }

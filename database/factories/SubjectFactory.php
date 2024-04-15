@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Classroom;
+use App\Models\Teacher;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,13 @@ class SubjectFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'code' => $this->faker->unique()->bothify('???###'),
+            'name' => $this->faker->sentence(2),
+            'day' => $this->faker->randomElement(['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes']),
+            'schedule' => $this->faker->time(),
+            'description' => $this->faker->paragraph(),
+            'teacher_id' => Teacher::factory(),
+            'classroom_id' => Classroom::factory(),
         ];
     }
 }
