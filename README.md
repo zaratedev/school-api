@@ -4,6 +4,8 @@ API Rest para gestionar la información de matrícula de los estudiantes de un c
 
 ## Diagrama E-R
 
+![Captura de pantalla 2024-04-15 a la(s) 15 44 26](https://github.com/zaratedev/school-api/assets/29809845/9dc4aadc-3660-4a5b-9976-4a2ea4b2b377)
+
 Las entidades principales se consideran las siguientes:
 
 * Estudiante
