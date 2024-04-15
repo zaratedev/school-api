@@ -17,7 +17,10 @@ class StudentFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'number' => $this->faker->unique()->bothify('##########'),
+            'name' => $this->faker->name(),
+            'last_name' => $this->faker->lastName(),
+            'year_old' => $this->faker->bothify('##'),
         ];
     }
 }
