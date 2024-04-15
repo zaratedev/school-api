@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\StudentController;
 use App\Http\Controllers\Api\StudentScheduleController;
 use App\Http\Controllers\Api\StudentSubjectController;
+use App\Http\Controllers\Api\SubjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,4 @@ Route::get('students/{number}/schedule', [StudentScheduleController::class, 'ind
 Route::post('students/subscribe', [StudentSubjectController::class, 'store']);
 Route::post('students/unsubscribe', [StudentSubjectController::class, 'destroy']);
 
+Route::get('subjects/{code}', [SubjectController::class, 'show']);
