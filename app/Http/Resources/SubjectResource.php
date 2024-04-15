@@ -27,7 +27,6 @@ class SubjectResource extends JsonResource
             'day' => $this->resource->day,
             'schedule' => $this->resource->schedule,
             'classroom' => $this->resource->classroom->classroom_number,
-            'teacher' => $this->resource->teacher->name,
         ];
     }
 }

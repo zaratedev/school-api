@@ -24,7 +24,6 @@ class SubjectFactory extends Factory
             'day' => $this->faker->randomElement(['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes']),
             'schedule' => $this->faker->time(),
             'description' => $this->faker->paragraph(),
-            'teacher_id' => Teacher::factory(),
             'classroom_id' => Classroom::factory(),
         ];
     }

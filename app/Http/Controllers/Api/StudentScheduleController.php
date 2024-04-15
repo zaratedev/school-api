@@ -16,7 +16,7 @@ class StudentScheduleController extends Controller
             return response()->json(['error' => 'Student not found'], 404);
         }
 
-        $subjects = $student->subjects()->with('classroom', 'teacher')->get();
+        $subjects = $student->subjects()->with('classroom')->get();
 
         return SubjectResource::collection($subjects);
     }

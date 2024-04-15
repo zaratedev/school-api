@@ -19,11 +19,6 @@ class Subject extends Model
      * Relationship
      */
 
-    public function teacher()
-    {
-        return $this->belongsTo(Teacher::class);
-    }
-
     public function classroom()
     {
         return $this->belongsTo(Classroom::class);
@@ -32,5 +27,10 @@ class Subject extends Model
     public function students()
     {
         return $this->belongsToMany(Student::class, 'student_subject');
+    }
+
+    public function teachers()
+    {
+        return $this->belongsToMany(Teacher::class);
     }
 }
