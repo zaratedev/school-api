@@ -8,4 +8,29 @@ use Illuminate\Database\Eloquent\Model;
 class Subject extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'code',
+        'description',
+    ];
+
+    /**
+     * Relationship
+     */
+
+    public function teacher()
+    {
+        return $this->belongsTo(Teacher::class);
+    }
+
+    public function classroom()
+    {
+        return $this->belongsTo(Classroom::class);
+    }
+
+    public function students()
+    {
+        return $this->belongsToMany(Student::class, 'student_subject');
+    }
 }
