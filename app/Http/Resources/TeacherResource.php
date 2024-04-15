@@ -22,8 +22,7 @@ class TeacherResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'name' => $this->resource->name,
-            'last_name' => $this->resource->last_name,
+            'full_name' => $this->resource->full_name,
         ];
     }
 }

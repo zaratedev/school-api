@@ -16,11 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Student::factory()->count(10)->create();
-
-        Teacher::factory()
+        Subject::factory()
             ->count(10)
-            ->has(Subject::factory()->count(3))
+            ->has(Teacher::factory()->count(3))
+            ->has(Student::factory()->count(5))
             ->create();
     }
 }

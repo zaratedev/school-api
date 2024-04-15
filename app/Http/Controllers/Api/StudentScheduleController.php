@@ -8,6 +8,12 @@ use App\Models\Student;
 
 class StudentScheduleController extends Controller
 {
+    /**
+     * Retrieved subject resource.
+     *
+     * @param  string $number
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     */
     public function index(string $number)
     {
         $student = Student::query()->where('number', $number)->first();
